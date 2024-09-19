@@ -25,9 +25,16 @@
 // }
 // retryPromise(3);
 
-function multiply(x,y){
-    return x*y;
-}
+// function multiply(x,y){
+//     return x*y;
+// }
 
-let multiply2=multiply.bind(this,2);
-console.log(multiply2(10));
+// let multiply2=multiply.bind(this,2);
+// console.log(multiply2(10));
+let ans=function (val){
+    return function (val1){
+        return val1 ? ans(val+val1) : val;
+    }
+}
+let fun=ans(1)(2)(3)();
+console.log(fun);

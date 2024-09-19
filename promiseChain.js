@@ -4,6 +4,10 @@ cart =['shoes',"denim jacket","watch","socks"];
 // proceedToPayment
 // showSummary
 // showWalletStatus
+// ==============================
+
+/** Creating promises */
+
 showWalletStatus=(data)=>{
     return new Promise((resolve,reject)=>{
         if(data.indexOf('Payment Summary')>-1)
@@ -22,14 +26,14 @@ showSummary=(data)=>{
             resolve("Payment Summary: You paid 500$ for 5 items");
         }
         else{
-            let err=new Error("Can't show Summary(Payment is not Done)");
+            let err=new Error("Can't show Summary (Payment is not Done)");
             reject(err);
         }
     })
 }
 proceedToPayment=(data)=>{
     return new Promise((resolve,reject)=>{
-        if(data.length)
+        if(typeof data==='string')
         {
             resolve("Your payment is successful");
         }
@@ -52,9 +56,9 @@ return new Promise((resolve,reject)=>{
     }
 })
 }
+// ===================================
 
-
-
+//consuming promises
 createOrder(cart)
 .then(function(data){
     console.log("createOrder",data);
