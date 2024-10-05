@@ -7,7 +7,7 @@
 //     [11,12]
 // ];
 
-// function customFlat(arr,depth){
+// function customFlat(arr,depth=1){
 //     let result=[];
 //     arr.forEach(element => {
 //         if(Array.isArray(element)&&depth>0){
@@ -27,11 +27,12 @@
 //==========================
 
 
-for(var i = 0; i < 3; i ++){
-    function timer(iter){
-             setTimeout(()=>{
-                     console.log(iter);    
-             }, iter * 1000)
-     }
- timer(i);
- }
+// for(var i = 0; i < 3; i ++){
+//     function timer(iter){
+//              setTimeout(()=>{
+//                      console.log(iter);    
+//              }, iter * 1000)
+//      }
+//  timer(i);
+//  }
+

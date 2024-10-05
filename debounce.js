@@ -12,14 +12,13 @@ function debounce(func,wait){
 
 }
 let obj={
-    a:10,
-    increment:increment
+    a:10
 }
 function increment(count){
     
     console.log(this.a+count);
 }
-const counter = debounce(obj.increment.bind(obj),5000);
+const counter = debounce(increment.bind(obj),5000);
 
 counter(0);
 counter(0);
