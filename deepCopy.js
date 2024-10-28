@@ -19,7 +19,8 @@ function deepcopy(obj) {
     address: {
     city: 'bangalore',
     state: 'karnataka'
-    }
+    },
+    city:['allahbad','moradabad','bly'],
 }
 const myobj=deepcopy(car);
 console.log(myobj);

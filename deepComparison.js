@@ -7,7 +7,7 @@ function deepComparison(first, second) {
     // Get property names of both objects
     let firstKeys = Object.keys(first);
     let secondKeys = Object.keys(second);
-  
+  console.log("jey",firstKeys);
     // Check if the number of properties is different
     if (firstKeys.length !== secondKeys.length) return false;
   
@@ -18,3 +18,26 @@ function deepComparison(first, second) {
   
     return true;
   }
+
+let obj1={
+  a:"abhi",
+  b:"chaudhary",
+  c:30,
+  d:{
+    n:"n",
+    m:"m"
+  }
+}
+let obj2={
+  a:"abhi",
+  b:"chaudhary",
+  c:30,
+  d:{
+    n:"n",
+    m:"m"
+  }
+}
+console.log(deepComparison(obj1,obj2));
+
+
+ 
